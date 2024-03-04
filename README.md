@@ -7,6 +7,17 @@
 
 GetImages is an Android app designed to fetch and display images from the Unsplash API. Users can explore a variety of images, view them in full-screen mode, download and save them locally, set them as wallpapers, like their favorite images, and more.
 
+## Features
+
+- **Image Fetching:** Utilizes the Unsplash API to fetch and display a diverse range of images.
+- **Full Image View:** Users can view images in full-screen mode for a more immersive experience.
+- **Download and Save:** Easily download and save images locally on the device.
+- **Set as Wallpaper:** Customize the device by setting the current image as the wallpaper.
+- **Like and Cache:** Like and cache favorite images within the app for quick access.
+- **Search Functionality:** Allows users to search for specific types of images.
+- **Image Information:** Provides detailed information about each image.
+- **Sharing:** Share images with friends and family.
+
 ## Screenshots
 <img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/06280f68-cf41-496f-9ddc-87ca6c87e1bd" alt="SplashActivity" width="200">
 
@@ -25,16 +36,7 @@ GetImages is an Android app designed to fetch and display images from the Unspla
 https://github.com/AdityaKumarGt/GetImages/assets/121026525/6c82f982-50e1-4139-a746-a3ef5cd9b37a
 
 
-## Features
 
-- **Image Fetching:** Utilizes the Unsplash API to fetch and display a diverse range of images.
-- **Full Image View:** Users can view images in full-screen mode for a more immersive experience.
-- **Download and Save:** Easily download and save images locally on the device.
-- **Set as Wallpaper:** Customize the device by setting the current image as the wallpaper.
-- **Like and Cache:** Like and cache favorite images within the app for quick access.
-- **Search Functionality:** Allows users to search for specific types of images.
-- **Image Information:** Provides detailed information about each image.
-- **Sharing:** Share images with friends and family.
 
 ## Technologies Used
 
