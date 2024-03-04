@@ -1,7 +1,6 @@
-<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/225af8ee-f93f-4d46-b969-6d39427ce97f" alt="app icon" width="150"> 
+<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/7f584439-cdc0-4395-8729-4d4fc056295d" alt="app icon" width="150"> 
 
 # GetImages 
-
 
 ## Overview
 
@@ -19,27 +18,23 @@ GetImages is an Android app designed to fetch and display images from the Unspla
 - **Sharing:** Share images with friends and family.
 
 ## Screenshots
-<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/06280f68-cf41-496f-9ddc-87ca6c87e1bd" alt="SplashActivity" width="200">
 
-<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/20b1481b-d8c8-4c96-a40b-a7e02ff78c23" alt="mainActivity" width="200">
+<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/a7f0aa2e-033d-4071-86bd-24c00b38479e" alt="SplashActivity" width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/22cc3653-415c-4e5e-8b6c-93b9689eb424" alt="mainActivity" width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/fa5a1117-3c1a-489d-ab38-61e539adf247" alt="fullImageActivity" width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/d021a563-2c9c-4590-96d1-98bcca57e4d2" alt="likedActivity0" width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/3c8e0974-0f71-4fcc-956a-08112343c01e" alt="likedActivity1" width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/a0fbacc2-9935-4f24-9c0e-c979b6c54d56" alt="searchActivity" width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/4621dbf4-aad7-41d7-90b4-5f46f729dc30" alt="fullImageActivity" width="200">
-
-<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/56e0e31e-059d-415d-8119-37fea3471c14" alt="likedActivity0" width="200">
-
-<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/02b1612d-081e-4624-85b4-479c9271c822" alt="likedActivity1" width="200">
-
-<img src="https://github.com/AdityaKumarGt/GetImages/assets/121026525/9f2ce1f4-e202-4923-bca4-c5b7d00eb00c" alt="searchActivity" width="200">
 
 
 ## Video Demo
-https://github.com/AdityaKumarGt/GetImages/assets/121026525/6c82f982-50e1-4139-a746-a3ef5cd9b37a
-
-
+https://github.com/AdityaKumarGt/GetImages/assets/121026525/7e01fc07-db0d-40f6-982a-ef12532d6289
 
 
 ## Technologies Used
 
+- MVVM Architecture
 - Java
 - XML for UI
 - Room Database
