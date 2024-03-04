@@ -1,0 +1,23 @@
+<!-- popup_message.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_info_bg"
+    android:orientation="vertical">
+
+    <!-- Add UI elements for the message content (e.g., TextView) -->
+    <TextView
+        android:id="@+id/messageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/aladin"
+        android:text="This is your message."
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <!-- Add any other UI elements or buttons as needed -->
+
+</LinearLayout>
