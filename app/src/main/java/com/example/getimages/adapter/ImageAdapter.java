@@ -2,16 +2,23 @@ package com.example.getimages.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.bumptech.glide.Glide;
 import com.example.getimages.ui.activities.FullImageActivity;
 import com.example.getimages.R;
 import com.example.getimages.models.ImageModel;
+import com.example.getimages.utils.LoadImageTask;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHolder> {
@@ -36,9 +43,9 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
     @Override
     public void onBindViewHolder(@NonNull ImageAdapter.ImageViewHolder holder, int position) {
-        Glide.with(context).load(list.get(position).getUrls().getRegular())
-                .into(holder.imageView);
-
+       // Glide.with(context).load(list.get(position).getUrls().getRegular()).into(holder.imageView);
+        String imageUrl = list.get(position).getUrls().getRegular();
+        new LoadImageTask(holder.imageView).execute(imageUrl);
 
 
         holder.imageView.setOnClickListener(v->{
@@ -49,6 +56,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
             context.startActivity(intent);
         });
     }
+
+
 
     @Override
     public int getItemCount() {
@@ -65,4 +74,16 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
         }
     }
+
+
+
+
+
+
+
+
 }
+
+
+
+

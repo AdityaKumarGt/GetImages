@@ -5,11 +5,13 @@ import android.app.WallpaperManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.MediaScannerConnection;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -29,19 +31,19 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.bumptech.glide.request.transition.Transition;
 import com.example.getimages.R;
 import com.example.getimages.db.LikedImageEntity;
 import com.example.getimages.ui.ImagesViewModel;
 import com.example.getimages.repository.ImagesRepository;
 import com.example.getimages.ui.ImagesViewModelFactory;
+import com.example.getimages.utils.LoadImageTask;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.URL;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -79,15 +81,21 @@ public class FullImageActivity extends AppCompatActivity {
         imageUrl = getIntent().getStringExtra("image");
         description = getIntent().getStringExtra("description");
 
-        Glide.with(this)
-                .asBitmap() // Request Glide to load the image as a Bitmap
-                .load(imageUrl)
-                .into(new SimpleTarget<Bitmap>() {
-                    @Override
-                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                        image.setImageBitmap(resource); // Set the Bitmap to the ImageView
-                    }
-                });
+//        Glide.with(this)
+//                .asBitmap() // Request Glide to load the image.png as a Bitmap
+//                .load(imageUrl)
+//                .into(new SimpleTarget<Bitmap>() {
+//                    @Override
+//                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+//                        image.setImageBitmap(resource); // Set the Bitmap to the ImageView
+//                    }
+//                });
+
+
+        new LoadImageTask(image).execute(imageUrl);
+
+
+
 
 
         // Observe the LiveData in activity
@@ -112,12 +120,12 @@ public class FullImageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (likedImageUrls.contains(imageUrl)) {
-                    // Remove the image URL from the list and update the button
+                    // Remove the image.png URL from the list and update the button
                     LikedImageEntity imageToDelete = new LikedImageEntity(imageUrl, description);
                     viewModel.deleteLikedImage(imageToDelete);
                     addToLike.setImageResource(R.drawable.heart);
                 } else {
-                    // Add the image URL to the list and update the button
+                    // Add the image.png URL to the list and update the button
                     LikedImageEntity newLikedImage = new LikedImageEntity(imageUrl, description);
                     viewModel.insertLikedImage(newLikedImage);
                     addToLike.setImageResource(R.drawable.black_heart);
@@ -204,7 +212,7 @@ public class FullImageActivity extends AppCompatActivity {
                         Manifest.permission.READ_EXTERNAL_STORAGE;
 
                 if (ContextCompat.checkSelfPermission(FullImageActivity.this, readImagePermission) == PackageManager.PERMISSION_GRANTED) {
-                    // Permission is granted, so proceed to save the image
+                    // Permission is granted, so proceed to save the image.png
                     saveImageToStorage();
                 } else {
                     // Permission is not granted, request it
@@ -254,7 +262,7 @@ public class FullImageActivity extends AppCompatActivity {
                 Toast.makeText(this, "File not found", Toast.LENGTH_SHORT).show();
             } catch (IOException e) {
                 e.printStackTrace();
-                Toast.makeText(this, "Error saving image", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Error saving image.png", Toast.LENGTH_SHORT).show();
             }
         } else {
             Toast.makeText(this, "Image could not be saved", Toast.LENGTH_SHORT).show();
@@ -308,6 +316,23 @@ public class FullImageActivity extends AppCompatActivity {
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
