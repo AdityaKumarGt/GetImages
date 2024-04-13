@@ -45,8 +45,9 @@ https://github.com/AdityaKumarGt/GetImages/assets/121026525/7e01fc07-db0d-40f6-9
 To get started with GetImages, follow these steps:
 
 1. Clone the repository.
-2. Build and run the project using Android Studio.(Don't forget to put your Unsplash api key in the ApiUtilities class, so that you can make requests without any error.)
+2. Build and run the project using Android Studio.(Don't forget to put your Unsplash api key in the [Constants class](https://github.com/AdityaKumarGt/GetImages/blob/master/app/src/main/java/com/example/getimages/utils/Constants.java), so that you can make requests without any error.)
 3. Explore the app's features and functionalities.
+
 
 
 ## Acknowledgments
