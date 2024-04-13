@@ -42,7 +42,7 @@ public class LikedImagesAdapter extends RecyclerView.Adapter<LikedImagesAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull LikedImagesViewHolder holder, int position) {
-       // Glide.with(context).load(list.get(position).getImageUrl()).into(holder.imageView);
+
         String imageUrl = list.get(position).getImageUrl();
         new LoadImageTask(holder.imageView).execute(imageUrl);
 

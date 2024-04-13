@@ -81,19 +81,7 @@ public class FullImageActivity extends AppCompatActivity {
         imageUrl = getIntent().getStringExtra("image");
         description = getIntent().getStringExtra("description");
 
-//        Glide.with(this)
-//                .asBitmap() // Request Glide to load the image.png as a Bitmap
-//                .load(imageUrl)
-//                .into(new SimpleTarget<Bitmap>() {
-//                    @Override
-//                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-//                        image.setImageBitmap(resource); // Set the Bitmap to the ImageView
-//                    }
-//                });
-
-
         new LoadImageTask(image).execute(imageUrl);
-
 
 
 

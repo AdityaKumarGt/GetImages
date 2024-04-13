@@ -4,13 +4,12 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.widget.ImageView;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
 public class LoadImageTask extends AsyncTask<String, Void, Bitmap> {
-    ImageView imageView;
+    ImageView imageView;   //Takes the image
 
     public LoadImageTask(ImageView imageView) {
         this.imageView = imageView;
